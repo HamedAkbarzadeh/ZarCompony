@@ -1,4 +1,4 @@
-import express, { json } from "express";
+import express from "express";
 import route from "./route" 
 
 const app = express();
@@ -22,4 +22,4 @@ mongoose.connect(config.get('db.address')).then(
 app.use('/api' , route);
 
 const port = process.env.PORT || 3000;
-app.listen(port , (e) => console.log(`connected on port ${port}`));
+app.listen(port , () => console.log(`connected on port ${port}`));

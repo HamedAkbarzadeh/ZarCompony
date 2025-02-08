@@ -5,8 +5,8 @@ import {gallerySchema} from "./gallery"
 const productSchema = new mongoose.Schema({
     name : {type:String , min:3 , default:true},
     introduction : {type:String , min:3 , default:true},
-    slug : {type:String , min:10 , default:true , unique:true},
-    passwrod : {type:String , default:true},
+    slug : {type:String , min:10 , default:true , unique:true , sparse:true},
+    password : {type:String , default:true},
     price : {type : Number , required : true},
     statsu : {type:Boolean , default : false},
     marketable : {type:Number , default : 0},

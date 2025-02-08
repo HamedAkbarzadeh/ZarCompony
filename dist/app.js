@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const route_1 = __importDefault(require("./route"));
 const app = (0, express_1.default)();
 const mongoose_1 = __importDefault(require("mongoose"));
 const config_1 = __importDefault(require("config"));
@@ -14,5 +15,6 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use(express_1.default.static("public"));
 app.use((0, morgan_1.default)("dev"));
 mongoose_1.default.connect(config_1.default.get('db.address')).then(() => { (0, debug_1.default)("connect to db"); }).catch(() => { (0, debug_1.default)("cant connect to db"); });
+app.use('/api', route_1.default);
 const port = process.env.PORT || 3000;
-app.listen(port, (e) => console.log(`connected on port ${port}`));
+app.listen(port, () => console.log(`connected on port ${port}`));

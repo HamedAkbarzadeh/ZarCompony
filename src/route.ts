@@ -1,14 +1,16 @@
-import mongoose from "mongoose";
 
 import {Router} from "express";
 
-import userRoute from "./modules/users/userRoute";
+import authRoute from "./modules/auth/authRoute";
+import userRoute from "./modules/admin/users/userRoute";
 const router = Router();
 
 
+//auth
+router.use("/auth" , authRoute);
+
 //user
 router.use("/users" , userRoute);
-// router.use("/product" , userRoute);
 
 
 export = router;

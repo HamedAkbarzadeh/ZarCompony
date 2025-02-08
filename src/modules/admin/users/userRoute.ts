@@ -4,8 +4,8 @@ import userValidator from "./userValidator"
 
 const router = Router();
 
-router.get('/' , userController.createUser)
+router.get('/' , userController.allUsers)
 
-router.post('/' , userValidator.registerValidator() , userController.validate ,userController.createUser)
+router.post('/' , userValidator.createUserValidator() , userController.validate ,userController.createUser)
 
 export = router;

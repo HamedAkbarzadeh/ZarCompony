@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 import mongooseDelete from "mongoose-delete"
 
 const provinceSchema = new mongoose.Schema({
