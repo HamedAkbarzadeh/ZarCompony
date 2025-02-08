@@ -1,4 +1,6 @@
 import express, { json } from "express";
+import route from "./route" 
+
 const app = express();
 
 import mongoose from "mongoose";
@@ -17,6 +19,7 @@ mongoose.connect(config.get('db.address')).then(
     () => {debug("cant connect to db")}
 );
 
+app.use('/api' , route);
 
 const port = process.env.PORT || 3000;
 app.listen(port , (e) => console.log(`connected on port ${port}`));
