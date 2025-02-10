@@ -2,9 +2,10 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const express_validator_1 = require("express-validator");
 const auto_bind_1 = __importDefault(require("auto-bind"));
-module.exports = class {
+class default_1 {
     constructor() {
         this.response = ({ res, message, code = 200, data = {} }) => {
             res.status(code).json({
@@ -36,4 +37,6 @@ module.exports = class {
         }
         next();
     }
-};
+}
+exports.default = default_1;
+;

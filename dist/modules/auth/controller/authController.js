@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const controller_1 = __importDefault(require("./../../../controller"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
@@ -18,7 +19,7 @@ const lodash_1 = __importDefault(require("lodash"));
 const config_1 = __importDefault(require("config"));
 //user
 const user_1 = require("./../../../database/user");
-module.exports = new (class extends controller_1.default {
+exports.default = new (class extends controller_1.default {
     registerUser(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             //check for this email exist in db 

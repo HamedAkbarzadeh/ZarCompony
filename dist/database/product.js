@@ -8,19 +8,18 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const mongoose_delete_1 = __importDefault(require("mongoose-delete"));
 const gallery_1 = require("./gallery");
 const productSchema = new mongoose_1.default.Schema({
-    name: { type: String, min: 3, default: true },
-    introduction: { type: String, min: 3, default: true },
-    slug: { type: String, min: 10, default: true, unique: true, sparse: true },
-    password: { type: String, default: true },
+    name: { type: String, min: 3 },
+    introduction: { type: String, min: 3 },
+    slug: { type: String, min: 10, unique: true, sparse: true },
     price: { type: Number, required: true },
-    statsu: { type: Boolean, default: false },
-    marketable: { type: Number, default: 0 },
+    status: { type: Boolean, default: false },
+    marketable: { type: Boolean, default: true },
     sold_number: { type: Number, default: 0 },
     frozen_number: { type: Number, default: 0 },
     marketable_number: { type: Number, default: 0 },
-    code: { type: Number, default: null },
-    tags: { type: String, null: true },
-    gallery: gallery_1.gallerySchema,
+    code: { type: Number, unique: true },
+    tags: { type: String, default: null },
+    gallery: [gallery_1.gallerySchema],
     brand: {
         type: mongoose_1.default.Schema.Types.ObjectId,
         ref: "Brand"

@@ -8,4 +8,4 @@ router.get('/' , userController.allUsers)
 
 router.post('/' , userValidator.createUserValidator() , userController.validate ,userController.createUser)
 
-export = router;
+export default router;

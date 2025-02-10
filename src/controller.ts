@@ -2,7 +2,7 @@ import { validationResult } from "express-validator";
 import autoBind from "auto-bind"
 import { Request , Response , NextFunction } from "express";
 
-export = class {
+export default class {
   constructor() {
     autoBind(this);
   }

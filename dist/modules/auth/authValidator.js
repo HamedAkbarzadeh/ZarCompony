@@ -1,8 +1,9 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // const expressValidator = require("express-validator");
 const express_validator_1 = require("express-validator");
 const helpers_1 = require("../../helpers/helpers");
-module.exports = new (class {
+exports.default = new (class {
     registerValidator() {
         return [
             (0, express_validator_1.check)("email").isEmail().withMessage("email is invalid"),

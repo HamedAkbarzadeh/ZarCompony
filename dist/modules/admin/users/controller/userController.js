@@ -11,11 +11,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const controller_1 = __importDefault(require("../../../../controller"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
 //user
 const user_1 = require("../../../../database/user");
-module.exports = new (class extends controller_1.default {
+exports.default = new (class extends controller_1.default {
     allUsers(_req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const users = yield user_1.User.find();

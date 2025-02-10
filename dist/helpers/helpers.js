@@ -13,4 +13,4 @@ const isValidIranianNationalCode = (code) => {
     return (remainder < 2 && check === remainder) || (remainder >= 2 && check === 11 - remainder);
 };
 exports.isValidIranianNationalCode = isValidIranianNationalCode;
-// export = {isValidIranianNationalCode};
+// export default {isValidIranianNationalCode};

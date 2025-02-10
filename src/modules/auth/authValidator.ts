@@ -2,7 +2,7 @@
 import  {check}  from "express-validator";
 import {isValidIranianNationalCode} from "../../helpers/helpers";
 
-export = new (class {
+export default new (class {
   registerValidator() {
     return [
       check("email").isEmail().withMessage("email is invalid"),

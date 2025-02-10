@@ -5,7 +5,7 @@ import bcrypt from "bcrypt"
 //user
 import { User } from "../../../../database/user";
 
-export = new (class extends controller{
+export default new (class extends controller{
 
     async allUsers(_req :Request , res : Response){
         const users = await User.find();

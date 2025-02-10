@@ -9,7 +9,7 @@ import config from "config"
 //user
 import { User } from "./../../../database/user";
 
-export = new (class extends controller{
+export default new (class extends controller{
 
     async registerUser(req : Request, res : Response){
         

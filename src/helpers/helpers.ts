@@ -9,4 +9,4 @@ export const isValidIranianNationalCode = (code: string): boolean => {
   return (remainder < 2 && check === remainder) || (remainder >= 2 && check === 11 - remainder);
 };
 
-// export = {isValidIranianNationalCode};
+// export default {isValidIranianNationalCode};

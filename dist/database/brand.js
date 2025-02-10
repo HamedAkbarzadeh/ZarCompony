@@ -7,12 +7,12 @@ exports.Brand = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const mongoose_delete_1 = __importDefault(require("mongoose-delete"));
 const brandSchema = new mongoose_1.default.Schema({
-    persian_name: { type: String, default: true },
-    original_name: { type: String, default: true },
-    slug: { type: String, default: true, unique: true },
-    logo: { type: String, default: true },
+    persian_name: { type: String },
+    original_name: { type: String },
+    slug: { type: String, unique: true, sparse: true },
+    logo: { type: String },
     status: { type: Boolean, default: true },
-    tags: { type: String, default: true },
+    tags: { type: String },
 }, {
     timestamps: true,
     toJSON: { virtuals: true },
